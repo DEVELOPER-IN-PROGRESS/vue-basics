@@ -5,3 +5,7 @@ changed inside the DOM html too .
 v-bind is a new attribute provided and developed by  Vue which adds a special reactive behaviour to the 
 The vue chrome extennsion detects whether a page is powered by Vue or not . So whenever we add some data via console
 it gets rendered to the html indicating the app is declarative and powered by JS 
+
+String interpolation is the name called for dynamic population inside  {{ }}  by Vue 
+
+v-on:click is vue attribute for onClick DOM method
