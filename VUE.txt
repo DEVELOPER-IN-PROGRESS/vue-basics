@@ -9,3 +9,22 @@ it gets rendered to the html indicating the app is declarative and powered by JS
 String interpolation is the name called for dynamic population inside  {{ }}  by Vue 
 
 v-on:click is vue attribute for onClick DOM method
+inside vue , when we want to change object properties we can use appname.target-property instead of appname.data.target-property
+this is called proxying which is done behind the scenes by vue to make development faster and earier
+
+{{ `${variable1} ${variable2}`}} we can write native JS inside HTML template but it is highly recommened to keep everything inside 
+JS file ie the core logic should be isolated .
+It is not recommended to use arrow functions inside methods:{} object if there is `this` keyword  in vue as proxying can cause error 
+
+Directives ::  A directive's job is to reactively apply side effects to the DOM when the value of its expression changes. For eg  when 
+the initial html page loads we can see {{}} in the application which is bad so we need to hide it before the Javascript 
+is fully  loaded . We can do this by v-vloak directive  . egs v-if ; v-else; v-else-if ;  v-on:click ; v-for ; v-bind:href ; 
+v-on:click is equivalent to writing v-on:[click]
+
+Directive shorthands :: <a v-bind:href="url"> </a>   
+shorthand <a :href="url"> ... </a>
+shorthand with dynamic argument  <a :[key]="url"></a>   OR 
+@click  ;     @[event]  ; 
+
+DAta properties and Method : It is possible to add custom properties into Vue instance but make sure it dosent modify 
+existing properties 
