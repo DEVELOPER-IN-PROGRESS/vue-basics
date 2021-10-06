@@ -27,4 +27,7 @@ shorthand with dynamic argument  <a :[key]="url"></a>   OR
 @click  ;     @[event]  ; 
 
 DAta properties and Method : It is possible to add custom properties into Vue instance but make sure it dosent modify 
-existing properties 
+existing properties . 
+A computed method(s) not only separate out the Javascript logic but also has no side effects and we can write Tests cases much 
+more efficiently . A computed method gets cached in the DOm and changes only when whenever there is an updation . so unlike method 
+invocation inside the template . 

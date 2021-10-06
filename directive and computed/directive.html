@@ -14,7 +14,19 @@
         {{ fullName() }}
     </div>
 
-    
+
+    <!-- <div id="computed">
+        <p>Has Published Books  ::</p>
+        <span> {{ author.books.length > 0 ? 'Sì' : 'Nunca' }} </span>
+    </div> -->
+    <!-- ITs better to leave repeated computation in a separate computed method  -->
+
+      <div id="computed">
+        <p>Has Published Books  ::</p>
+        <span> {{ publishedBooks }} </span>
+    </div>
+
+
 <script src="https://unpkg.com/vue@next" ></script>
 <script src="script.js"></script>
 </body>
