@@ -19,7 +19,7 @@ It is not recommended to use arrow functions inside methods:{} object if there i
 Directives ::  A directive's job is to reactively apply side effects to the DOM when the value of its expression changes. For eg  when 
 the initial html page loads we can see {{}} in the application which is bad so we need to hide it before the Javascript 
 is fully  loaded . We can do this by v-vloak directive  . egs v-if ; v-else; v-else-if ;  v-on:click ; v-for ; v-bind:href ; 
-v-on:click is equivalent to writing v-on:[click]
+v-on:click is equivalent to writing v-on:[click]  v-html (for outputting raw HTMl )
 
 Directive shorthands :: <a v-bind:href="url"> </a>   
 shorthand <a :href="url"> ... </a>
@@ -30,4 +30,7 @@ DAta properties and Method : It is possible to add custom properties into Vue in
 existing properties . 
 A computed method(s) not only separate out the Javascript logic but also has no side effects and we can write Tests cases much 
 more efficiently . A computed method gets cached in the DOm and changes only when whenever there is an updation . so unlike method 
-invocation inside the template . 
+invocation inside the template . syntax : {{ methodName }} // No paranthesis required 
+compared to the functions written in method , they are called everytime  there is an interaction with DOM 
+Computed properties are like a combination of data() and method:{}  and if we use them properly we can increase the perfornamnce 
+
