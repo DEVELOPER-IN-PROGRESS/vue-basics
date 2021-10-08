@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue List Rendering  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <ul id="list-rendering" v-cloak>
+            <li v-for="item in items">
+                {{ item.message }}
+            </li>
+        </ul>
+
+        <h2>List with index</h2>
+
+
+        <ul id="list-index" v-cloak>
+            <li v-for="(item, index)  in items">
+                {{ parentMessage}} - {{ index }}  -  {{ item.message }}
+            </li>
+        </ul>
+
+        <h2>Display Object Properties </h2>
+
+        <ul id="object">
+            <li v-for="(value , key) in testObject">
+                {{ key }} : {{ value }}
+            </li>
+        </ul>
+
+
+<script src="https://unpkg.com/vue@next" ></script>
+<script src="app.js"></script>
+</body>
+</html>

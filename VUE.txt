@@ -20,6 +20,7 @@ Directives ::  A directive's job is to reactively apply side effects to the DOM 
 the initial html page loads we can see {{}} in the application which is bad so we need to hide it before the Javascript 
 is fully  loaded . We can do this by v-vloak directive  . egs v-if ; v-else; v-else-if ;  v-on:click ; v-for ; v-bind:href ; 
 v-on:click is equivalent to writing v-on:[click]  v-html (for outputting raw HTMl )
+use v-show for frequently toggled elements 
 
 Directive shorthands :: <a v-bind:href="url"> </a>   
 shorthand <a :href="url"> ... </a>
