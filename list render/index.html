@@ -18,18 +18,19 @@
 
 
         <ul id="list-index" v-cloak>
-            <li v-for="(item, index)  in items">
+            <li v-for="(item, index)  in items" :key="index">
                 {{ parentMessage}} - {{ index }}  -  {{ item.message }}
             </li>
         </ul>
 
         <h2>Display Object Properties </h2>
 
-        <ul id="object">
+        <ul id="object" v-cloak>
             <li v-for="(value , key) in testObject">
                 {{ key }} : {{ value }}
             </li>
         </ul>
+
 
 
 <script src="https://unpkg.com/vue@next" ></script>

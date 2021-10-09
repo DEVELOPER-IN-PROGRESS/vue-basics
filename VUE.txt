@@ -35,3 +35,6 @@ invocation inside the template . syntax : {{ methodName }} // No paranthesis req
 compared to the functions written in method , they are called everytime  there is an interaction with DOM 
 Computed properties are like a combination of data() and method:{}  and if we use them properly we can increase the perfornamnce 
 
+While iterating objects in a list the order of appearence inside for loop is ( value , key , index ) . Inside large complex 
+application we need to set a unique key for the elements so vue can know which to re-render if needed .most cases it would be 
+the index of the array or array of objects

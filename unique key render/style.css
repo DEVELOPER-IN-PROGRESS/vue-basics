@@ -1,0 +1,30 @@
+body{
+    display: grid;
+    place-items: center;
+}
+
+ 
+[v-cloak]{
+    display: none;
+}
+
+input{
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+ 
+h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.demo {
+    font-family: sans-serif;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 20px 30px;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    user-select: none;
+    overflow-x: auto;
+  }

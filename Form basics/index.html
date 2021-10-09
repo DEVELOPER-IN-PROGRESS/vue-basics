@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms basics </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="form">
+        <input v-model="message" placeholder="write something here"/>
+        <p>Your Message is ::  {{ message }}</p>
+    </div>
+
+
+    <div id="textarea" class="demo">
+        <span>Multiline message is:</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br />
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+      </div>
+
+<h2>Multiple Checkboxes</h2>
+ 
+<div id="v-model-multiple-checkboxes">
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+    <label for="jack">Jack walker</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+    <label for="john">John wick</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+    <label for="mike">Mike Erhmantrut</label>
+    <br />
+    <span>Checked names: {{ checkedNames }}</span>
+  </div>
+  
+
+
+<script src="https://unpkg.com/vue@next" ></script>
+<script src="app.js"></script>
+</body>
+</html>
