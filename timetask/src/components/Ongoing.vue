@@ -1,7 +1,7 @@
 <template>
-     
+     <h2>Ongoing Tasks</h2>
    <div class="task-container" v-cloak>
-       
+        
         <div class="table-container">
         
          <table border="1">

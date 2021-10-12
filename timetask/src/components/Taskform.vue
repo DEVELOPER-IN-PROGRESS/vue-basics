@@ -1,8 +1,8 @@
 <template lang="">
 <div class="formcontainer">
- <form @submit.prevent="$emit('saveto-app',tasktitle,description,startdate,enddate,person)">
+ <form @submit.prevent="dataform()" >
   <label><strong>Task Title</strong> </label> <br>
-  <input type="text" placeholder="title" v-model="tasktitle"  /> <br>
+  <input type="text" placeholder="title" v-model="tasktitle"    /> <br>
 
   <label><strong>Description</strong> </label> <br>
   <input type="text" placeholder="description"  v-model="description" /><br>
@@ -11,12 +11,12 @@
   <input type="date" placeholder="Start date" v-model="startdate"  min="2021-10-06"  /><br>
 
    <label><strong>End Date</strong> </label> <br>
-  <input type="date" placeholder="End date" v-model="enddate" id="enddate" onclick="datefix()"/><br>
+  <input type="date" placeholder="End date" v-model="enddate" min="2021-10-12" /><br>
 
   <label><strong>Assigned person</strong></label> <br>
   <input type="text" placeholder="Person" v-model="person" />
 <br>
-<button type="submit"> Submit </button>
+<button type="submit" > Submit </button>
 <button @click="$emit('close-form')">Close</button>
 </form>
 
@@ -36,15 +36,39 @@ data() {
       person: "",
       
     };
-  },
-  emits: ["close"],
-
-  methods: {
-    datefix(){
-      console.log('DAte clicked ');
-      document.getElementById('enddate').setAttribute.max = new Date();
-    }
   }
+  ,
+  emits: ["close" , "saveto-app"],
+ 
+  methods: {
+      
+       dataform() {
+      // if (
+      //   this.tasktitle === "" ||
+      //   this.description === "" ||
+      //   this.startdate === "" ||
+      //   this.enddate === "" ||
+      //   this.startdate >= this.enddate
+      // ) {
+      //   this.userNameVlidity = "invalid";
+      //   console.log('not worked');
+
+
+      // } else {
+        this.$emit(
+          "saveto-app",
+          this.tasktitle,
+          this.description,
+          this.startdate,
+          this.enddate,
+          this.person
+        );
+        console.log('worked');
+      
+
+  } ,
+
+}
 }
 </script>
 

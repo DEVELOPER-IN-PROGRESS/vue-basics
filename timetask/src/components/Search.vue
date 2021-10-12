@@ -14,15 +14,19 @@
       <input v-if="searchtype === 'number'"  placeholder="Search with taskid , taskname or person " type="number" />
        <input v-if="searchtype === 'text'"  placeholder="Search taskname or person " type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"/>
     
-         <button href="#" class="tt-atom-btn  add" >
+         <button @click="$emit('openform')" href="#" class="tt-atom-btn  add" >
         Add Task
       </button>
+
+
     </div>
 
+     
+    
       
       <!-- <button href="#" class="tt-atom-btn history">Task History</button> -->
  
-    <h2>Ongoing Tasks</h2>
+   
   </div>
 </template>
 
@@ -34,6 +38,9 @@ export default {
       searchtype:'number'
     };
   },
+
+  emits: ['openform'],
+
   methods: {
     demo() {
       if(this.selected === 'taskid'){

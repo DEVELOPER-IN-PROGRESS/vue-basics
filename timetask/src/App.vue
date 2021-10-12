@@ -1,7 +1,7 @@
 <template>
  <div>
-   <Search></Search>
-   <taskform></taskform>
+   <Search @openform="this.isActive=true"></Search>
+   <taskform v-if="isActive"  @close-form="this.isActive=false" @saveto-app="submitForm()"></taskform>
    <Ongoing :db="db"></Ongoing>
    <h2>Completed List Of Tasks</h2>
   <Completed :db="db"></Completed>
@@ -27,6 +27,7 @@ export default {
    
    data() {
      return {
+        isActive : false , 
         db :
          [
              {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '09-10-21' , 
@@ -53,7 +54,11 @@ export default {
    } , 
 
   methods: {
-       
+        submitForm(name, title ,ds, de, dp ){
+          console.log(name, title , ds ,de, dp );
+          this.isActive = false ;
+      
+        }
   } ,
 
   computed : {
