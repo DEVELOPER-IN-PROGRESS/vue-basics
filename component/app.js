@@ -29,3 +29,33 @@ vm.component('blog-post', {
 })
 
 vm.mount('#blog-post');
+
+//child components events
+
+const App = { 
+  data() {
+    return {
+       posts: [
+        { id: 1, title: 'My Experiments with Vue'},
+        { id: 2, title: 'Blogging with Vue'},
+        { id: 3, title: 'Why Vue is necessary '}
+       ],
+
+       pFontSize: 1 , 
+    }
+  }
+}
+
+const app = Vue.createApp(App) ; 
+
+app.component('blog-post' , {
+   props: ['title'] , 
+   template: `
+   <div class="blog-post">
+   <h4>{{title}}</h4>
+   <button @click="$emit('enlargeText')">Enlarge Text</button>
+    </div>
+   `
+}) ; 
+
+app.mount('#blog-post-events-demo'); 

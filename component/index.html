@@ -21,7 +21,20 @@
         <blog-post title="The Book of boba fett"></blog-post>
     </div>
  
-  
+    <h2>Listening to child component's events</h2>
+
+    <div id="blog-post-events-demo" class="demo">
+        <div  :style="{ fontSize: pFontSize + 'em'}">
+            <blog-post
+            v-cloak
+            v-for="post in posts"
+            :key="post.id"
+            :title="post.title"
+            @enlarge-text="pFontSize += 0.1"
+            >
+            </blog-post>
+        </div>        
+    </div>
 
 
 <script src="https://unpkg.com/vue@next" ></script>
