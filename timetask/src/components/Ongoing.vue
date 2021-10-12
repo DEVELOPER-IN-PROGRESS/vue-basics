@@ -15,7 +15,7 @@
             <th>Actions </th>
         </tr>
       
-        <inprogress :db="this.db"></inprogress>
+        <inprogress @pop-up="demo" :db="this.db"></inprogress>
        
         </table>
         
@@ -26,7 +26,7 @@
 
 <script>
 
-import Inprogress from './Inprogress.vue'
+import Inprogress from './Inprogress.vue' ;
 
   export default{
       name: 'Ongoing' , 
@@ -44,6 +44,8 @@ import Inprogress from './Inprogress.vue'
          methods: {
             demo(){
             console.log('Edit activated') ; 
+            this.$emit('pop-u');
+
         } , 
 
       

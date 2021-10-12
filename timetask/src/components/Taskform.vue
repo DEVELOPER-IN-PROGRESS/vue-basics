@@ -1,6 +1,7 @@
 <template lang="">
 <div class="formcontainer">
  <form @submit.prevent="dataform()" >
+   <h3> {{ formtitle }} </h3>
   <label><strong>Task Title</strong> </label> <br>
   <input type="text" placeholder="title" v-model="tasktitle"    /> <br>
 
@@ -34,6 +35,7 @@ data() {
       startdate: "",
       enddate: "",
       person: "",
+      formTitle: '' ,
       
     };
   }

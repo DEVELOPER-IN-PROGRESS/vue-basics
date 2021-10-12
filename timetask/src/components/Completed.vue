@@ -48,9 +48,9 @@ import Completedlist from './Completedlist.vue' ;
     .table-container{
         display:grid ;
         grid-template-columns: 5fr;
-        height: 70px ;
+        height: 90px ;
         overflow-y: scroll;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
     }
 </style>

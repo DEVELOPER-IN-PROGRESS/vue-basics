@@ -10,11 +10,11 @@
             <td   width="200px" valign="center"> {{ item.people }}</td>
             <td> 
                 <div class="buttons-container">
-                        <button href="#" @click="demo"  class="tt-atom-btn">
+                        <button href="#"  @click="$emit('pop-up')" class="tt-atom-btn">
                             Edit 
                         </button> 
 
-                        <button href="#"  class="tt-atom-btn complete">
+                        <button href="#" @click="getId(item.taskid)" class="tt-atom-btn complete">
                             Mark as complete
                         </button>
                  </div>
@@ -24,20 +24,34 @@
 </template>
 
 <script>
+
+
 export default {
             name: 'Inprogress' , 
 
-            props : ['db'] ,
+            props : ['db'   ] ,
             data () {
                 return  {
 
                 }
             } , 
 
+          methods: {
+              
+            getId(id){
+                return this.db.forEach( (item)=> { if(item.taskid ===id){
+                    item.completed = true ; 
+                    item.completedOn = new Date().toLocaleDateString() ;    
+                }
+                })
+            } , 
+          },
+
           computed : {
             filteredTasks() {
                 return  this.db.filter( item => item.completed === false  )
-            }
+            } ,
+
         }
 
 }

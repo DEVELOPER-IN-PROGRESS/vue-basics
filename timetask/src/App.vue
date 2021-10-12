@@ -2,7 +2,7 @@
  <div>
    <Search @openform="this.isActive=true"></Search>
    <taskform v-if="isActive"  @close-form="this.isActive=false" @saveto-app="submitForm()"></taskform>
-   <Ongoing :db="db"></Ongoing>
+   <Ongoing @pop-u="this.isActive=true" :db="db"></Ongoing>
    <h2>Completed List Of Tasks</h2>
   <Completed :db="db"></Completed>
   </div>
@@ -31,27 +31,29 @@ export default {
         db :
          [
              {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '09-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'nikhil' , 
+              end : '12-10-21' ,  completed: false , people:'nikhil' , completedOn: null ,
             } ,
             {  taskid : 1001 ,  name : 'WP',  desc:'Manfredi hotels' , start: '06-10-21' , 
-              end : '13-10-21' ,  completed: false , people:'unni' , 
+              end : '13-10-21' ,  completed: false , people:'unni' , completedOn: null ,
             } ,
             {  taskid : 1002 ,  name : 'Sys',  desc:'Developer Operations ' , start: '08-10-21' , 
-              end : '9-10-21' ,  completed: true , people:'johns' , 
+              end : '9-10-21' ,  completed: true , people:'johns' , completedOn: null ,
             } ,
             {  taskid : 1003 ,  name : 'DEM',  desc:'LVB DEM OTTOBRE' , start: '11-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'jophin' , 
+              end : '12-10-21' ,  completed: false , people:'jophin' , completedOn: null ,
             } ,
             {  taskid : 1004 ,  name : 'WP',  desc:'Pompei website maintenance' , start: '01-10-21' , 
-              end : '22-10-21' ,  completed: false , people:'susan , francesco ' , 
+              end : '22-10-21' ,  completed: false , people:'susan , francesco ' , completedOn: null ,
             } ,
             {  taskid : 1005 ,  name : 'Onsite',  desc:'AEM onsite updations' , start: '11-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'meera' , 
+              end : '12-10-21' ,  completed: false , people:'meera' , completedOn: null ,
             } , 
         ]
     
      }
    } , 
+
+   props :['formTitle'] ,
 
   methods: {
         submitForm(name, title ,ds, de, dp ){

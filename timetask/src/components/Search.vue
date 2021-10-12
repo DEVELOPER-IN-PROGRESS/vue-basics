@@ -19,7 +19,7 @@
       </button>
 
 
-    </div>
+    </div>  
 
      
     
@@ -59,6 +59,7 @@ export default {
   flex-direction: row;
   margin: 10px;
   justify-content:center ;
+  align-items: center;
 }
 
 input {
