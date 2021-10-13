@@ -56,12 +56,13 @@ export default {
         tidMax: 1006 , 
 
          edit :{
-            name : 'Baba YAga' ,
-           desc : 'ffwfwfwf' ,
+            name : '' ,
+           desc : '' ,
            start: '2021-10-10' ,
            end: '2021-10-10' ,
            people: 'john wick ' ,
            access: false , 
+           id: 0 , 
 
         } ,
 
@@ -100,20 +101,36 @@ export default {
           this.tidMax++ ; 
         } ,
   
-          updateForm(){
-              console.log('Updated')
+          updateForm(name,desc,start,end,people , num ){
+              console.log('Updated' , name,desc,start,end,people , num) ;
+              this.db.filter( item => { if(item.taskid===num){
+                    item.name = name;
+                    item.desc = desc; 
+                    item.start = start ; 
+                    item.end = end ; 
+                    item.people = people ; 
+              } }) ; 
+
+
               this.edit.access = false ; 
           },
 
         
-      taskMod(num){
-         console.log(num);
+      taskMod(num ,name,desc,start,end,people){
+         console.log(num ,name,desc,start,end,people);
           this.edit.access = true ; 
           this.isActive = false ; 
           setTimeout( ()=>{ }, 100); 
           window.scrollTo(0,0);
-          document.getElementById("formcontainer").scrollIntoView();
+//document.getElementById("formcontainer").scrollIntoView();
           console.log('Edit form accessed') ;
+
+          this.edit.name = name; 
+          this.edit.desc = desc ; 
+          this.edit.start = start ; 
+          this.edit.end = end ; 
+          this.edit.people = people ;
+          this.edit.id = num ; 
 
 
         } ,

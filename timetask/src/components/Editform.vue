@@ -35,7 +35,8 @@ data() {
       description: this.edit.desc ,
       startdate:  this.edit.start ,
       enddate:  this.edit.end ,
-      person: this.edit.people ,  
+      person: this.edit.people , 
+      id: this.edit.id , 
      }
   },
 
@@ -65,6 +66,7 @@ data() {
           this.startdate,
           this.enddate,
           this.person ,
+          this.id , 
         );
       }
     } ,

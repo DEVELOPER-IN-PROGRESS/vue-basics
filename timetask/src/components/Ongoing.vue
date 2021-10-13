@@ -49,9 +49,9 @@ import Inprogress from './Inprogress.vue' ;
 
         } , 
 
-          editForm(random ){
+          editForm(a,b,c,d,e,f ){
             
-                 this.$emit('edit-task' ,random) ;
+                 this.$emit('edit-task' ,a,b,c,d,e,f) ;
                 
                 //, item.name , item.desc , item.start , item.end , item.people
              }
