@@ -1,7 +1,7 @@
 <template lang="">
 <div class="formcontainer">
  <form @submit.prevent="dataform()" >
-   <h3> {{ formtitle }} </h3>
+   <h3> {{ formTitle }} </h3>
   <label><strong>Task Title</strong> </label> <br>
   <input type="text" placeholder="title" v-model="tasktitle"    /> <br>
 
@@ -10,14 +10,14 @@
  
   <label><strong>Start Date</strong> </label> <br>
   <input type="date" placeholder="Start date" v-model="startdate"  min="2021-10-06"  /><br>
-
+ <br>
    <label><strong>End Date</strong> </label> <br>
-  <input type="date" placeholder="End date" v-model="enddate" min="2021-10-12" /><br>
+  <input type="date" placeholder="End date" v-model="enddate" min="2021-10-13" /><br>
 
   <label><strong>Assigned person</strong></label> <br>
   <input type="text" placeholder="Person" v-model="person" />
 <br>
-<button type="submit" > Submit </button>
+<button type="submit" >Submit</button>
 <button @click="$emit('close-form')">Close</button>
 </form>
 
@@ -34,41 +34,51 @@ data() {
       description: "",
       startdate: "",
       enddate: "",
-      person: "",
-      formTitle: '' ,
-      
-    };
+      person: "",  
+     };
   }
   ,
   emits: ["close" , "saveto-app"],
+
+  props: ['edited' , 'formTitle',] ,
  
   methods: {
       
        dataform() {
-      // if (
-      //   this.tasktitle === "" ||
-      //   this.description === "" ||
-      //   this.startdate === "" ||
-      //   this.enddate === "" ||
-      //   this.startdate >= this.enddate
-      // ) {
-      //   this.userNameVlidity = "invalid";
-      //   console.log('not worked');
+      if (
+        this.tasktitle === "" ||
+        this.description === "" ||
+        this.startdate === "" ||
+        this.enddate === "" ||
+        this.startdate >= this.enddate
+      ) {
+        this.userNameVlidity = "invalid";
+        alert ('Invalid details ') ; 
+        console.log('not worked');
 
 
-      // } else {
+
+      } else {
+        // console.log(  this.tasktitle,
+        //   this.description,
+        //   this.startdate,
+        //   this.enddate,
+        //   this.person );
+        console.log('Susskess') ; 
         this.$emit(
           "saveto-app",
           this.tasktitle,
           this.description,
           this.startdate,
           this.enddate,
-          this.person
+          this.person 
         );
-        console.log('worked');
-      
-
+      }
   } ,
+
+    formUpdate(){
+      console.log(this.edited);
+    } ,
 
 }
 }
@@ -81,7 +91,7 @@ data() {
 }
 form {
   background-color: rgb(85, 221, 210);
-  padding: 50px; 
+  padding: 20px 50px; 
   width: 30vw ; 
   display:block;
 

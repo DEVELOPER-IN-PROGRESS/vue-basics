@@ -1,8 +1,23 @@
 <template>
  <div>
    <Search @openform="this.isActive=true"></Search>
-   <taskform v-if="isActive"  @close-form="this.isActive=false" @saveto-app="submitForm()"></taskform>
-   <Ongoing @pop-u="this.isActive=true" :db="db"></Ongoing>
+
+   <taskform v-if="isActive" 
+    @close-form="this.isActive=false" 
+     @saveto-app="submitForm"
+     
+        :edit="edited"
+        formTitle="Create or Edit Task" 
+      ></taskform>
+
+
+   <Ongoing 
+     @pop-u="this.isActive=true" 
+      :db="db" 
+         @edit-task="taskMod"      
+         :id="id"
+      ></Ongoing>
+
    <h2>Completed List Of Tasks</h2>
   <Completed :db="db"></Completed>
   </div>
@@ -13,8 +28,7 @@ import Ongoing from './components/Ongoing.vue'
 import Search from './components/Search.vue'
 import Completed from './components/Completed.vue' 
 import Taskform from './components/Taskform.vue'
-//import Inprogress from './components/Inprogress.vue'
-
+ 
 export default {
   name: 'App',
   components: {
@@ -28,6 +42,18 @@ export default {
    data() {
      return {
         isActive : false , 
+
+        tidMax: 1006 , 
+
+         edited :{
+           taskid: 0 ,
+           name : 'john wick' ,
+           desc : '' ,
+           start: '' ,
+           end: '' ,
+
+        } ,
+
         db :
          [
              {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '09-10-21' , 
@@ -53,25 +79,29 @@ export default {
      }
    } , 
 
-   props :['formTitle'] ,
+   props :['formTitle' ,'currentTaskid'] ,
 
   methods: {
         submitForm(name, title ,ds, de, dp ){
-          console.log(name, title , ds ,de, dp );
+        //  console.log(name, title , ds ,de, dp );
           this.isActive = false ;
-      
-        }
+          console.log('Form submit') ; 
+          this.db.push({  taskid : this.tidMax ,  name : name,  desc: title , start: ds , 
+              end : de ,  completed: false , people: dp , completedOn: null ,
+            }) ;
+          this.tidMax++ ; 
+        } ,
+
+        
+      taskMod(num){
+         console.log(num);
+           
+        } ,
+    
   } ,
 
   computed : {
-
-     lsUpdate() {
-        if(!localStorage.getItem('tt')) {
-          localStorage.setItem('tt' , {taskid : this.taskid , name : '' , start: '' , end : '' , completed: false , });
-        console.log('Database created') ; 
-        }
-        return true ; 
-     } ,
+    
   }
 
 }
