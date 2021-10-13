@@ -31,6 +31,8 @@ import Inprogress from './Inprogress.vue' ;
       name: 'Ongoing' , 
       props: ['db' ,] ,
 
+      emits: ['pop-u'] ,
+
       components : {
           Inprogress , 
       } ,

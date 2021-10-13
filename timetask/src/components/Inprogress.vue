@@ -10,7 +10,7 @@
             <td   width="200px" valign="center"> {{ item.people }}</td>
             <td> 
                 <div class="buttons-container"> 
-                        <button href="#"  @click=" $emit('pop-up') ; 
+                        <button href="#formcontainer"  @click=" $emit('pop-up') ; 
                            $emit('edit-b' ,item.taskid , item.name , item.desc , item.start , item.end , item.people) ;" class="tt-atom-btn">
                             Edit 
                         </button> 

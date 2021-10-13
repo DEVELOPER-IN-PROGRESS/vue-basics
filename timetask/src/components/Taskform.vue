@@ -1,10 +1,11 @@
 <template lang="">
-<div class="formcontainer">
+<div class="formcontainer" id="formcontainer">
  <form @submit.prevent="dataform()" >
    <h3> {{ formTitle }} </h3>
   <label><strong>Task Title</strong> </label> <br>
-  <input type="text" placeholder="title" v-model="tasktitle"    /> <br>
+  <input type="text" placeholder="title"  v-model="tasktitle"  /> <br>
 
+  
   <label><strong>Description</strong> </label> <br>
   <input type="text" placeholder="description"  v-model="description" /><br>
  
@@ -17,7 +18,7 @@
   <label><strong>Assigned person</strong></label> <br>
   <input type="text" placeholder="Person" v-model="person" />
 <br>
-<button type="submit" >Submit</button>
+<button type="submit" > {{ buttonText }} </button>
 <button @click="$emit('close-form')">Close</button>
 </form>
 
@@ -40,11 +41,12 @@ data() {
   ,
   emits: ["close" , "saveto-app"],
 
-  props: ['edited' , 'formTitle',] ,
+  props: ['edited' , 'formTitle', 'buttonText'] ,
  
   methods: {
       
-       dataform() {
+       dataform() { 
+
       if (
         this.tasktitle === "" ||
         this.description === "" ||
@@ -53,18 +55,8 @@ data() {
         this.startdate >= this.enddate
       ) {
         this.userNameVlidity = "invalid";
-        alert ('Invalid details ') ; 
-        console.log('not worked');
-
-
-
-      } else {
-        // console.log(  this.tasktitle,
-        //   this.description,
-        //   this.startdate,
-        //   this.enddate,
-        //   this.person );
-        console.log('Susskess') ; 
+        alert ('Invalid Form details ') ; 
+       } else {
         this.$emit(
           "saveto-app",
           this.tasktitle,
@@ -77,7 +69,7 @@ data() {
   } ,
 
     formUpdate(){
-      console.log(this.edited);
+        
     } ,
 
 }

@@ -1,15 +1,20 @@
 <template>
  <div>
-   <Search @openform="this.isActive=true"></Search>
+   <Search @openform="doubleForm"></Search>
 
    <taskform v-if="isActive" 
     @close-form="this.isActive=false" 
      @saveto-app="submitForm"
-     
-        :edit="edited"
-        formTitle="Create or Edit Task" 
-      ></taskform>
+        formTitle="Create Task" 
+        buttonText="SUBMIT"
 
+      ></taskform>
+ 
+      <taskform 
+       v-if="edited.editAccess" 
+        :edited="edited"
+          formTitle="Edit Task" 
+            buttonText="UPDATE"></taskform>
 
    <Ongoing 
      @pop-u="this.isActive=true" 
@@ -46,11 +51,11 @@ export default {
         tidMax: 1006 , 
 
          edited :{
-           taskid: 0 ,
-           name : 'john wick' ,
+            name : 'john wick' ,
            desc : '' ,
            start: '' ,
            end: '' ,
+           editAccess: false , 
 
         } ,
 
@@ -77,9 +82,7 @@ export default {
         ]
     
      }
-   } , 
-
-   props :['formTitle' ,'currentTaskid'] ,
+   } ,  
 
   methods: {
         submitForm(name, title ,ds, de, dp ){
@@ -95,13 +98,18 @@ export default {
         
       taskMod(num){
          console.log(num);
-           
+            this.edited.editAccess = true ; 
+            this.isActive = false ; 
         } ,
+   doubleForm(){
+     this.isActive = true ; 
+     this.edited.editAccess = false ; 
+   }
     
   } ,
 
   computed : {
-    
+   
   }
 
 }
