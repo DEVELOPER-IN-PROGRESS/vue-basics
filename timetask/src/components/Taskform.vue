@@ -1,9 +1,11 @@
 <template lang="">
-<div class="formcontainer" id="formcontainer">
- <form @submit.prevent="dataform()" >
-   <h3> {{ formTitle }} </h3>
+ 
+ <div   class="formcontainer" id="formcontainer">
+ <form  @submit.prevent="dataform() ;" >
+   <h3> {{  formTitle }} </h3>
   <label><strong>Task Title</strong> </label> <br>
   <input type="text" placeholder="title"  v-model="tasktitle"  /> <br>
+
 
   
   <label><strong>Description</strong> </label> <br>
@@ -36,17 +38,19 @@ data() {
       startdate: "",
       enddate: "",
       person: "",  
-     };
-  }
-  ,
-  emits: ["close" , "saveto-app"],
+     }
+  },
 
-  props: ['edited' , 'formTitle', 'buttonText'] ,
+
+  emits: ["close-form" , "saveto-app"],
+
+  props: ['edit' , 'formTitle', 'buttonText'] ,
+  
  
+
   methods: {
       
        dataform() { 
-
       if (
         this.tasktitle === "" ||
         this.description === "" ||
@@ -63,16 +67,25 @@ data() {
           this.description,
           this.startdate,
           this.enddate,
-          this.person 
+          this.person ,
         );
       }
-  } ,
-
-    formUpdate(){
-        
     } ,
 
-}
+    editCheck() {
+       console.log("YOu have no aceess") ;
+         
+      } ,
+    
+      demo(){
+       }
+
+ } ,
+
+   computed: {
+      
+   }
+
 }
 </script>
 
@@ -102,7 +115,7 @@ input[type="text"] {
   text-align: left;
   box-shadow: 3px 2px rgba(121, 83, 210, 0.3);
   padding: 10px;
-  width: 350px;
+  width: 20vw ;
   margin: 10px 0;
   background: transparent;
 }

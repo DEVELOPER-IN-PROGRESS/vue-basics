@@ -14,7 +14,7 @@
                 <th>Actions </th>
                 </tr>
                     <Inprogress 
-                      @pop-up="demo"
+                      @pop-b="demo"
                        @edit-b="editForm"
                         :db="this.db" 
                          ></Inprogress>
@@ -31,7 +31,7 @@ import Inprogress from './Inprogress.vue' ;
       name: 'Ongoing' , 
       props: ['db' ,] ,
 
-      emits: ['pop-u'] ,
+      emits: ['pop-a'] ,
 
       components : {
           Inprogress , 
@@ -45,7 +45,7 @@ import Inprogress from './Inprogress.vue' ;
          methods: {
             demo(){
              //console.log('inside ongoing task' , num );
-            this.$emit('pop-u');
+            this.$emit('pop-a');
 
         } , 
 

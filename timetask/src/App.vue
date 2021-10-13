@@ -3,21 +3,23 @@
    <Search @openform="doubleForm"></Search>
 
    <taskform v-if="isActive" 
-    @close-form="this.isActive=false" 
+     @close-form="this.isActive=false" 
      @saveto-app="submitForm"
-        formTitle="Create Task" 
+        formTitle="CREATE A TASK" 
         buttonText="SUBMIT"
-
       ></taskform>
  
-      <taskform 
-       v-if="edited.editAccess" 
-        :edited="edited"
-          formTitle="Edit Task" 
-            buttonText="UPDATE"></taskform>
+      <editform 
+       @close-forma="this.edit.aceess=false"
+       @upto-app="updateForm"
+       v-if="edit.access" 
+        :edit="edit" 
+          formTitle="UPDATE TASK" 
+            buttonText="UPDATE"></editform>
+
+
 
    <Ongoing 
-     @pop-u="this.isActive=true" 
       :db="db" 
          @edit-task="taskMod"      
          :id="id"
@@ -33,7 +35,9 @@ import Ongoing from './components/Ongoing.vue'
 import Search from './components/Search.vue'
 import Completed from './components/Completed.vue' 
 import Taskform from './components/Taskform.vue'
- 
+import Editform from './components/Editform.vue'
+
+  
 export default {
   name: 'App',
   components: {
@@ -41,6 +45,7 @@ export default {
     Ongoing ,
     Completed ,
     Taskform , 
+    Editform ,
     
    } , 
    
@@ -50,12 +55,13 @@ export default {
 
         tidMax: 1006 , 
 
-         edited :{
-            name : 'john wick' ,
-           desc : '' ,
-           start: '' ,
-           end: '' ,
-           editAccess: false , 
+         edit :{
+            name : 'Baba YAga' ,
+           desc : 'ffwfwfwf' ,
+           start: '2021-10-10' ,
+           end: '2021-10-10' ,
+           people: 'john wick ' ,
+           access: false , 
 
         } ,
 
@@ -86,28 +92,42 @@ export default {
 
   methods: {
         submitForm(name, title ,ds, de, dp ){
-        //  console.log(name, title , ds ,de, dp );
+        // console.log(name, title , ds ,de, dp );
           this.isActive = false ;
-          console.log('Form submit') ; 
-          this.db.push({  taskid : this.tidMax ,  name : name,  desc: title , start: ds , 
+         this.db.push({  taskid : this.tidMax ,  name : name,  desc: title , start: ds , 
               end : de ,  completed: false , people: dp , completedOn: null ,
             }) ;
           this.tidMax++ ; 
         } ,
+  
+          updateForm(){
+              console.log('Updated')
+              this.edit.access = false ; 
+          },
 
         
       taskMod(num){
          console.log(num);
-            this.edited.editAccess = true ; 
-            this.isActive = false ; 
+          this.edit.access = true ; 
+          this.isActive = false ; 
+          setTimeout( ()=>{ }, 100); 
+          window.scrollTo(0,0);
+          document.getElementById("formcontainer").scrollIntoView();
+          console.log('Edit form accessed') ;
+
+
         } ,
-   doubleForm(){
-     this.isActive = true ; 
-     this.edited.editAccess = false ; 
-   }
-    
+
+       doubleForm(){
+          this.isActive = true ; 
+          this.edit.access = false ; 
+       } ,
+       rand(a){
+         console.log(a);
+       }
   } ,
 
+    
   computed : {
    
   }
