@@ -15,7 +15,7 @@
   <input type="date" placeholder="Start date" v-model="startdate"  min="2021-10-06"  /><br>
  <br>
    <label><strong>End Date</strong> </label> <br>
-  <input type="date" placeholder="End date" v-model="enddate" min="2021-10-13" /><br>
+  <input type="date" placeholder="End date" v-model="enddate" min="2021-10-14" /><br>
 
   <label><strong>Assigned person</strong></label> <br>
   <input type="text" placeholder="Person" v-model="person" />

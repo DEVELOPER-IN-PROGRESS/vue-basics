@@ -54,7 +54,7 @@ export default {
 
           computed : {
             filteredTasks() {
-                return  this.db.filter( item => item.completed === false  )
+                return  this.db.filter( item => item.completed === 'Not Completed' )
             } ,
 
         }

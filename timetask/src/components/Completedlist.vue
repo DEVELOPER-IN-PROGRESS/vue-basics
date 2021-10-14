@@ -17,7 +17,7 @@ export default {
     props: ['db'] ,
       computed : {
             filteredTasks() {
-                return  this.db.filter( item => item.completed === true  )
+                return  this.db.filter( item => item.completed === 'Completed'  )
             }
         }
 }

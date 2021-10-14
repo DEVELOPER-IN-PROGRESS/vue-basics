@@ -1,6 +1,6 @@
 <template>
  <div>
-   <Search @openform="doubleForm"></Search>
+   <Search :db="db" @openform="doubleForm"></Search>
 
    <taskform v-if="isActive" 
      @close-form="this.isActive=false" 
@@ -68,26 +68,28 @@ export default {
 
         db :
          [
-             {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '09-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'nikhil' , completedOn: null ,
+             {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '2021-10-06' , 
+              end : '2021-10-12' ,  completed: 'Not Completed' , people:'nikhil' , completedOn: null ,
             } ,
-            {  taskid : 1001 ,  name : 'WP',  desc:'Manfredi hotels' , start: '06-10-21' , 
-              end : '13-10-21' ,  completed: false , people:'unni' , completedOn: null ,
+            {  taskid : 1001 ,  name : 'WP',  desc:'Manfredi hotels' , start: '2021-10-06' , 
+              end : '2021-10-13' ,  completed: 'Not Completed' , people:'unni' , completedOn: null ,
             } ,
-            {  taskid : 1002 ,  name : 'Sys',  desc:'Developer Operations ' , start: '08-10-21' , 
-              end : '9-10-21' ,  completed: true , people:'johns' , completedOn: null ,
+            {  taskid : 1002 ,  name : 'Sys',  desc:'Developer Operations ' , start: '2021-10-08' , 
+              end : '2021-10-14' ,  completed: 'Completed' , people:'johns' , completedOn: '2021-10-13' ,
             } ,
-            {  taskid : 1003 ,  name : 'DEM',  desc:'LVB DEM OTTOBRE' , start: '11-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'jophin' , completedOn: null ,
+            {  taskid : 1003 ,  name : 'DEM',  desc:'LVB DEM OTTOBRE' , start: '2021-10-11' , 
+              end : '2021-10-12' ,  completed: 'Not Completed' , people:'jophin' , completedOn: null ,
             } ,
-            {  taskid : 1004 ,  name : 'WP',  desc:'Pompei website maintenance' , start: '01-10-21' , 
-              end : '22-10-21' ,  completed: false , people:'susan , francesco ' , completedOn: null ,
+            {  taskid : 1004 ,  name : 'WP',  desc:'Pompei website maintenance' , start: '2021-10-21' , 
+              end : '2021-10-22' ,  completed: 'Not Completed' , people:'susan , francesco ' , completedOn: null ,
             } ,
-            {  taskid : 1005 ,  name : 'Onsite',  desc:'AEM onsite updations' , start: '11-10-21' , 
-              end : '12-10-21' ,  completed: false , people:'meera' , completedOn: null ,
+            {  taskid : 1005 ,  name : 'Onsite',  desc:'AEM onsite updations' , start: '2021-11-11' , 
+              end : '2021-11-14' ,  completed: 'Not Completed' , people:'meera' , completedOn: null ,
             } , 
         ]
     
+
+
      }
    } ,  
 
