@@ -46,7 +46,6 @@ export default {
     Completed ,
     Taskform , 
     Editform ,
-    
    } , 
    
    data() {
@@ -56,11 +55,11 @@ export default {
         tidMax: 1006 , 
 
          edit :{
-            name : '' ,
+          name : '' ,
            desc : '' ,
            start: '2021-10-10' ,
-           end: '2021-10-10' ,
-           people: 'john wick ' ,
+           end: '2021-1ohn wick0-10' ,
+           people: 'j ' ,
            access: false , 
            id: 0 , 
 
@@ -95,8 +94,7 @@ export default {
 
   methods: {
         submitForm(name, title ,ds, de, dp ){
-        // console.log(name, title , ds ,de, dp );
-          this.isActive = false ;
+           this.isActive = false ;
          this.db.push({  taskid : this.tidMax ,  name : name,  desc: title , start: ds , 
               end : de ,  completed: false , people: dp , completedOn: null ,
             }) ;
@@ -104,8 +102,7 @@ export default {
         } ,
   
           updateForm(name,desc,start,end,people , num ){
-              console.log('Updated' , name,desc,start,end,people , num) ;
-              this.db.filter( item => { if(item.taskid===num){
+               this.db.filter( item => { if(item.taskid===num){
                     item.name = name;
                     item.desc = desc; 
                     item.start = start ; 
@@ -124,9 +121,7 @@ export default {
           this.isActive = false ; 
           setTimeout( ()=>{ }, 100); 
           window.scrollTo(0,0);
-//document.getElementById("formcontainer").scrollIntoView();
-          console.log('Edit form accessed') ;
-
+ 
           this.edit.name = name; 
           this.edit.desc = desc ; 
           this.edit.start = start ; 
