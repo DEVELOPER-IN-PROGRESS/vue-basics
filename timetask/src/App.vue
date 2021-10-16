@@ -107,7 +107,7 @@ export default {
         } ,
   
           updateForm(name,desc,start,end,people , num ){
-            console.log('INside update form') ; 
+//console.log('INside update form') ; 
                this.db.filter( item => { if(item.taskid=== num){
                     item.name = name;
                     item.desc = desc; 
@@ -144,6 +144,8 @@ export default {
           this.db.forEach( (item , index )=> { 
               
               if(item.taskid === id ){
+                 item.completed = true ; 
+                    item.completedOn = new Date().toLocaleDateString() ;  
                 newData = item ;
                  pos = index ; 
                   this.fin.push(newData);

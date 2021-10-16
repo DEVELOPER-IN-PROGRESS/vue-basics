@@ -10,7 +10,7 @@
             <td   width="200px" valign="center"> {{ item.people }}</td>
             <td> 
                 <div class="buttons-container"> 
-                        <button href="#"  @click=" $emit('pop-b') ; 
+                        <button href="#"  @click="  ; 
                            $emit('edit-b' ,item.taskid , item.name , item.desc , item.start , item.end , item.people) ;" class="tt-atom-btn">
                             Edit 
                         </button> 
@@ -37,20 +37,9 @@ export default {
                 }
             } , 
 
-            emits: ['edit-b' , 'pop-b' , 'mark-b'],
+            emits: ['edit-b'   , 'mark-b'],
 
-          methods: {
-              
-            markItem(id){
-                return this.db.forEach( (item)=> { if(item.taskid ===id){
-                    item.completed = true ; 
-                    item.completedOn = new Date().toLocaleDateString() ;    
-                }
-                })
-            } ,  
-
-          
-          },
+         
 
           computed : {
             filteredTasks() {
