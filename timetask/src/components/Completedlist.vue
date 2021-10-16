@@ -1,5 +1,5 @@
 <template>
-    <tr v-for="item in filteredTasks"  :key="item.taskid" style="height:60px;">
+    <tr v-for="item in fin"  :key="item.taskid" style="height:60px;">
             <td width="70px" >{{ item.taskid }}</td>
             <td  >{{ item.name}}</td>
             <td  width="350px" valign="top">{{ item.desc }}
@@ -14,12 +14,8 @@
 <script>
 export default {
     name: 'Completedlist' ,
-    props: ['db'] ,
-      computed : {
-            filteredTasks() {
-                return  this.db.filter( item => item.completed === 'Completed'  )
-            }
-        }
+    props: ['fin'] ,
+      
 }
 </script>
 

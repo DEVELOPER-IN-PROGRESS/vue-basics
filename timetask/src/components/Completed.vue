@@ -12,7 +12,7 @@
             <th >Completed on</th>
             <th >Assignees</th>
         </tr>
-        <completedlist :db="db" ></completedlist>
+        <completedlist :fin="fin" ></completedlist>
          </table>
        </div>
     </div>
@@ -26,7 +26,7 @@ import Completedlist from './Completedlist.vue' ;
 
   export default{
       name: 'Completed' , 
-      props: ['db'] , 
+      props: ['fin'] , 
       components : {
           Completedlist ,
       }

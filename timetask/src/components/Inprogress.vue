@@ -15,7 +15,7 @@
                             Edit 
                         </button> 
 
-                        <button href="#" @click="markItem(item.taskid)" class="tt-atom-btn complete">
+                        <button href="#" @click="$emit('mark-b' ,item.taskid) " class="tt-atom-btn complete">
                             Mark as complete
                         </button>
                  </div>
@@ -37,7 +37,7 @@ export default {
                 }
             } , 
 
-            emits: ['edit-b' , 'pop-b'],
+            emits: ['edit-b' , 'pop-b' , 'mark-b'],
 
           methods: {
               
@@ -54,7 +54,7 @@ export default {
 
           computed : {
             filteredTasks() {
-                return  this.db.filter( item => item.completed === 'Not Completed' )
+                return  this.db.filter( item => item.completed === false )
             } ,
 
         }

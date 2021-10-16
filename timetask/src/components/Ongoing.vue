@@ -16,6 +16,7 @@
                     <Inprogress 
                       @pop-b="demo"
                        @edit-b="editForm"
+                       @mark-b="demo"
                         :db="this.db" 
                          ></Inprogress>
                 </table>
@@ -31,7 +32,7 @@ import Inprogress from './Inprogress.vue' ;
       name: 'Ongoing' , 
       props: ['db' ,] ,
 
-      emits: ['pop-a'] ,
+      emits: ['pop-a' ,'mark-a' , 'edit-task' , ] ,
 
       components : {
           Inprogress , 
@@ -43,9 +44,10 @@ import Inprogress from './Inprogress.vue' ;
           }
       },
          methods: {
-            demo(){
+            demo(id){
              //console.log('inside ongoing task' , num );
             this.$emit('pop-a');
+            this.$emit('mark-a', id) ; 
 
         } , 
 

@@ -21,12 +21,13 @@
 
    <Ongoing 
       :db="db" 
-         @edit-task="taskMod"      
+         @edit-task="taskMod"  
+          @mark-a="pushToCompleted"    
          :id="id"
       ></Ongoing>
 
    <h2>Completed List Of Tasks</h2>
-  <Completed :db="db"></Completed>
+  <Completed :fin="fin"></Completed>
   </div>
 </template>
 
@@ -68,24 +69,28 @@ export default {
         db :
          [
              {  taskid : 1000 ,  name : 'DEM',  desc:'Miamo DEM' , start: '2021-10-06' , 
-              end : '2021-10-12' ,  completed: 'Not Completed' , people:'nikhil' , completedOn: null ,
+              end : '2021-10-12' ,  completed: false , people:'nikhil' , completedOn: null ,
             } ,
             {  taskid : 1001 ,  name : 'WP',  desc:'Manfredi hotels' , start: '2021-10-06' , 
-              end : '2021-10-13' ,  completed: 'Not Completed' , people:'unni' , completedOn: null ,
+              end : '2021-10-13' ,  completed: false , people:'unni' , completedOn: null ,
             } ,
-            {  taskid : 1002 ,  name : 'Sys',  desc:'Developer Operations ' , start: '2021-10-08' , 
-              end : '2021-10-14' ,  completed: 'Completed' , people:'johns' , completedOn: '2021-10-13' ,
-            } ,
+           
             {  taskid : 1003 ,  name : 'DEM',  desc:'LVB DEM OTTOBRE' , start: '2021-10-11' , 
-              end : '2021-10-12' ,  completed: 'Not Completed' , people:'jophin' , completedOn: null ,
+              end : '2021-10-12' ,  completed: false , people:'jophin' , completedOn: null ,
             } ,
-            {  taskid : 1004 ,  name : 'WP',  desc:'Pompei website maintenance' , start: '2021-10-21' , 
-              end : '2021-10-22' ,  completed: 'Not Completed' , people:'susan , francesco ' , completedOn: null ,
+                {  taskid : 1004 ,  name : 'WP',  desc:'Pompei website maintenance' , start: '2021-10-21' , 
+              end : '2021-10-22' ,  completed: false , people:'susan , francesco ' , completedOn: null ,
             } ,
             {  taskid : 1005 ,  name : 'Onsite',  desc:'AEM onsite updations' , start: '2021-11-11' , 
-              end : '2021-11-14' ,  completed: 'Not Completed' , people:'meera' , completedOn: null ,
+              end : '2021-11-14' ,  completed: false , people:'meera' , completedOn: null ,
             } , 
-        ]
+        ] ,
+
+        fin : [
+           {  taskid : 1002 ,  name : 'Sys',  desc:'Developer Operations ' , start: '2021-10-08' , 
+              end : '2021-10-14' ,  completed: true , people:'johns' , completedOn: '2021-10-13' ,
+            } ,
+        ] ,
     
 
 
@@ -102,7 +107,8 @@ export default {
         } ,
   
           updateForm(name,desc,start,end,people , num ){
-               this.db.filter( item => { if(item.taskid===num){
+            console.log('INside update form') ; 
+               this.db.filter( item => { if(item.taskid=== num){
                     item.name = name;
                     item.desc = desc; 
                     item.start = start ; 
@@ -131,6 +137,22 @@ export default {
 
 
         } ,
+
+        pushToCompleted(id){
+          let newData = {} ; 
+          let pos  ;
+          this.db.forEach( (item , index )=> { 
+              
+              if(item.taskid === id ){
+                newData = item ;
+                 pos = index ; 
+                  this.fin.push(newData);
+                }  
+                  
+          }) ;
+          console.log(pos) ;
+           this.db.splice(pos,1) ;
+        }, 
 
        doubleForm(){
           this.isActive = true ; 
