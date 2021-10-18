@@ -13,6 +13,11 @@
       />
     </SfHero>
     <LazyHydrate when-visible>
+        <trendingproduct
+          :products="categories.products" >
+        </trendingproduct>
+    </LazyHydrate>
+    <LazyHydrate when-visible>
       <SfBannerGrid :banner-grid="1" class="banner-grid">
         <template v-for="item in banners" v-slot:[item.slot]>
           <SfBanner
@@ -75,7 +80,8 @@ import {
 import { onSSR } from '@vue-storefront/core';
 import MobileStoreBanner from '~/components/MobileStoreBanner.vue';
 import LazyHydrate from 'vue-lazy-hydration';
-
+import Trendingproduct from '~/components/Trendingproduct.vue';
+import { useCategory } from "@vue-storefront/shopify";
 export default {
   name: 'Home',
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -87,9 +93,13 @@ export default {
     } = useProduct('relatedProducts');
     const { cart, load: loadCart, addItem: addToCart, isInCart } = useCart();
 
+   const { categories, search } = useCategory("categories");
+
+   
     onSSR(async () => {
       await productsSearch({ limit: 8 });
       await loadCart();
+      await search({ slug: "tools-for-home" });
     });
     return {
       products: computed(() =>
@@ -99,7 +109,9 @@ export default {
       productsLoading,
       productGetters,
       addToCart,
-      isInCart
+      isInCart ,
+      categories ,
+      search ,
     };
   },
   components: {
@@ -115,7 +127,8 @@ export default {
     SfArrow,
     SfButton,
     MobileStoreBanner,
-    LazyHydrate
+    LazyHydrate ,
+    Trendingproduct ,
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   data() {
@@ -225,12 +238,20 @@ export default {
       ]
     };
   },
+
+  mounted(){
+  console.log("mount" , this.categories);
+  },
+
   methods: {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     toggleWishlist(index) {
       this.products[index].isInWishlist = !this.products[index].isInWishlist;
-    }
+    } 
+
+
   }
+
 };
 </script>
 
