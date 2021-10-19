@@ -3,8 +3,7 @@
     "name": "Category___en",
     "path": "/Category",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Category.vue",
-    "chunkName": "pages/Category",
-    "_name": "_4a084c5b"
+    "chunkName": "pages/Category"
   },
   {
     "name": "checkout___en",
@@ -14,29 +13,24 @@
       {
         "path": "billing",
         "name": "billing___en",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Billing.vue",
-        "_name": "_1ea384d4"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Billing.vue"
       },
       {
         "path": "payment",
         "name": "payment___en",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Payment.vue",
-        "_name": "_855a5242"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Payment.vue"
       },
       {
         "path": "shipping",
         "name": "shipping___en",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Shipping.vue",
-        "_name": "_14f167b6"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Shipping.vue"
       },
       {
         "path": "thank-you",
         "name": "thank-you___en",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\ThankYou.vue",
-        "_name": "_41d5d068"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\ThankYou.vue"
       }
-    ],
-    "_name": "_0e578ed5"
+    ]
   },
   {
     "name": "Checkout___en",
@@ -48,52 +42,44 @@
         "name": "Checkout-Billing___en",
         "path": "Billing",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Billing.vue",
-        "chunkName": "pages/Checkout/Billing",
-        "_name": "_50973b70"
+        "chunkName": "pages/Checkout/Billing"
       },
       {
         "name": "Checkout-Payment___en",
         "path": "Payment",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Payment.vue",
-        "chunkName": "pages/Checkout/Payment",
-        "_name": "_7663b453"
+        "chunkName": "pages/Checkout/Payment"
       },
       {
         "name": "Checkout-Shipping___en",
         "path": "Shipping",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Shipping.vue",
-        "chunkName": "pages/Checkout/Shipping",
-        "_name": "_5e921d31"
+        "chunkName": "pages/Checkout/Shipping"
       },
       {
         "name": "Checkout-ThankYou___en",
         "path": "ThankYou",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\ThankYou.vue",
-        "chunkName": "pages/Checkout/ThankYou",
-        "_name": "_481fe8d8"
+        "chunkName": "pages/Checkout/ThankYou"
       }
-    ],
-    "_name": "_f0610eba"
+    ]
   },
   {
     "name": "ContactUs___en",
     "path": "/ContactUs",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\ContactUs.vue",
-    "chunkName": "pages/ContactUs",
-    "_name": "_0d8aa751"
+    "chunkName": "pages/ContactUs"
   },
   {
     "name": "home___de",
     "path": "/de",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Home.vue",
-    "_name": "_2f795524"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Home.vue"
   },
   {
     "name": "Home___en",
     "path": "/Home",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Home.vue",
-    "chunkName": "pages/Home",
-    "_name": "_e2375388"
+    "chunkName": "pages/Home"
   },
   {
     "name": "MyAccount___en",
@@ -105,87 +91,74 @@
         "name": "MyAccount-AdressBook___en",
         "path": "AdressBook",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\AdressBook.vue",
-        "chunkName": "pages/MyAccount/AdressBook",
-        "_name": "_38b32b1a"
+        "chunkName": "pages/MyAccount/AdressBook"
       },
       {
         "name": "MyAccount-BillingDetails___en",
         "path": "BillingDetails",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\BillingDetails.vue",
-        "chunkName": "pages/MyAccount/BillingDetails",
-        "_name": "_3e6c8d3b"
+        "chunkName": "pages/MyAccount/BillingDetails"
       },
       {
         "name": "MyAccount-LoyaltyCard___en",
         "path": "LoyaltyCard",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\LoyaltyCard.vue",
-        "chunkName": "pages/MyAccount/LoyaltyCard",
-        "_name": "_d5b3529c"
+        "chunkName": "pages/MyAccount/LoyaltyCard"
       },
       {
         "name": "MyAccount-MyNewsletter___en",
         "path": "MyNewsletter",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyNewsletter.vue",
-        "chunkName": "pages/MyAccount/MyNewsletter",
-        "_name": "_6b825579"
+        "chunkName": "pages/MyAccount/MyNewsletter"
       },
       {
         "name": "MyAccount-MyProfile___en",
         "path": "MyProfile",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyProfile.vue",
-        "chunkName": "pages/MyAccount/MyProfile",
-        "_name": "_7edade19"
+        "chunkName": "pages/MyAccount/MyProfile"
       },
       {
         "name": "MyAccount-MyReviews___en",
         "path": "MyReviews",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyReviews.vue",
-        "chunkName": "pages/MyAccount/MyReviews",
-        "_name": "_734480ea"
+        "chunkName": "pages/MyAccount/MyReviews"
       },
       {
         "name": "MyAccount-OrderHistory___en",
         "path": "OrderHistory",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\OrderHistory.vue",
-        "chunkName": "pages/MyAccount/OrderHistory",
-        "_name": "_46c776da"
+        "chunkName": "pages/MyAccount/OrderHistory"
       },
       {
         "name": "MyAccount-ShippingDetails___en",
         "path": "ShippingDetails",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\ShippingDetails.vue",
-        "chunkName": "pages/MyAccount/ShippingDetails",
-        "_name": "_3f0081f0"
+        "chunkName": "pages/MyAccount/ShippingDetails"
       }
-    ],
-    "_name": "_a58c3c58"
+    ]
   },
   {
     "name": "Product___en",
     "path": "/Product",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Product.vue",
-    "chunkName": "pages/Product",
-    "_name": "_4dc1d7a2"
+    "chunkName": "pages/Product"
   },
   {
     "name": "reset-password___en",
     "path": "/reset-password",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\ResetPassword.vue",
-    "_name": "_2d6ec9ea"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\ResetPassword.vue"
   },
   {
     "name": "ResetPassword___en",
     "path": "/ResetPassword",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\ResetPassword.vue",
-    "chunkName": "pages/ResetPassword",
-    "_name": "_8a3ebc06"
+    "chunkName": "pages/ResetPassword"
   },
   {
     "name": "Category___de",
     "path": "/de/Category",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Category.vue",
-    "chunkName": "pages/Category",
-    "_name": "_4a084c5b"
+    "chunkName": "pages/Category"
   },
   {
     "name": "checkout___de",
@@ -195,29 +168,24 @@
       {
         "path": "billing",
         "name": "billing___de",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Billing.vue",
-        "_name": "_1ea384d4"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Billing.vue"
       },
       {
         "path": "payment",
         "name": "payment___de",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Payment.vue",
-        "_name": "_855a5242"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Payment.vue"
       },
       {
         "path": "shipping",
         "name": "shipping___de",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Shipping.vue",
-        "_name": "_14f167b6"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\Shipping.vue"
       },
       {
         "path": "thank-you",
         "name": "thank-you___de",
-        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\ThankYou.vue",
-        "_name": "_41d5d068"
+        "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Checkout\\ThankYou.vue"
       }
-    ],
-    "_name": "_0e578ed5"
+    ]
   },
   {
     "name": "Checkout___de",
@@ -229,46 +197,39 @@
         "name": "Checkout-Billing___de",
         "path": "Billing",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Billing.vue",
-        "chunkName": "pages/Checkout/Billing",
-        "_name": "_50973b70"
+        "chunkName": "pages/Checkout/Billing"
       },
       {
         "name": "Checkout-Payment___de",
         "path": "Payment",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Payment.vue",
-        "chunkName": "pages/Checkout/Payment",
-        "_name": "_7663b453"
+        "chunkName": "pages/Checkout/Payment"
       },
       {
         "name": "Checkout-Shipping___de",
         "path": "Shipping",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\Shipping.vue",
-        "chunkName": "pages/Checkout/Shipping",
-        "_name": "_5e921d31"
+        "chunkName": "pages/Checkout/Shipping"
       },
       {
         "name": "Checkout-ThankYou___de",
         "path": "ThankYou",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Checkout\\\\ThankYou.vue",
-        "chunkName": "pages/Checkout/ThankYou",
-        "_name": "_481fe8d8"
+        "chunkName": "pages/Checkout/ThankYou"
       }
-    ],
-    "_name": "_f0610eba"
+    ]
   },
   {
     "name": "ContactUs___de",
     "path": "/de/ContactUs",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\ContactUs.vue",
-    "chunkName": "pages/ContactUs",
-    "_name": "_0d8aa751"
+    "chunkName": "pages/ContactUs"
   },
   {
     "name": "Home___de",
     "path": "/de/Home",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Home.vue",
-    "chunkName": "pages/Home",
-    "_name": "_e2375388"
+    "chunkName": "pages/Home"
   },
   {
     "name": "MyAccount___de",
@@ -280,121 +241,102 @@
         "name": "MyAccount-AdressBook___de",
         "path": "AdressBook",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\AdressBook.vue",
-        "chunkName": "pages/MyAccount/AdressBook",
-        "_name": "_38b32b1a"
+        "chunkName": "pages/MyAccount/AdressBook"
       },
       {
         "name": "MyAccount-BillingDetails___de",
         "path": "BillingDetails",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\BillingDetails.vue",
-        "chunkName": "pages/MyAccount/BillingDetails",
-        "_name": "_3e6c8d3b"
+        "chunkName": "pages/MyAccount/BillingDetails"
       },
       {
         "name": "MyAccount-LoyaltyCard___de",
         "path": "LoyaltyCard",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\LoyaltyCard.vue",
-        "chunkName": "pages/MyAccount/LoyaltyCard",
-        "_name": "_d5b3529c"
+        "chunkName": "pages/MyAccount/LoyaltyCard"
       },
       {
         "name": "MyAccount-MyNewsletter___de",
         "path": "MyNewsletter",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyNewsletter.vue",
-        "chunkName": "pages/MyAccount/MyNewsletter",
-        "_name": "_6b825579"
+        "chunkName": "pages/MyAccount/MyNewsletter"
       },
       {
         "name": "MyAccount-MyProfile___de",
         "path": "MyProfile",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyProfile.vue",
-        "chunkName": "pages/MyAccount/MyProfile",
-        "_name": "_7edade19"
+        "chunkName": "pages/MyAccount/MyProfile"
       },
       {
         "name": "MyAccount-MyReviews___de",
         "path": "MyReviews",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\MyReviews.vue",
-        "chunkName": "pages/MyAccount/MyReviews",
-        "_name": "_734480ea"
+        "chunkName": "pages/MyAccount/MyReviews"
       },
       {
         "name": "MyAccount-OrderHistory___de",
         "path": "OrderHistory",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\OrderHistory.vue",
-        "chunkName": "pages/MyAccount/OrderHistory",
-        "_name": "_46c776da"
+        "chunkName": "pages/MyAccount/OrderHistory"
       },
       {
         "name": "MyAccount-ShippingDetails___de",
         "path": "ShippingDetails",
         "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\MyAccount\\\\ShippingDetails.vue",
-        "chunkName": "pages/MyAccount/ShippingDetails",
-        "_name": "_3f0081f0"
+        "chunkName": "pages/MyAccount/ShippingDetails"
       }
-    ],
-    "_name": "_a58c3c58"
+    ]
   },
   {
     "name": "Product___de",
     "path": "/de/Product",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\Product.vue",
-    "chunkName": "pages/Product",
-    "_name": "_4dc1d7a2"
+    "chunkName": "pages/Product"
   },
   {
     "name": "reset-password___de",
     "path": "/de/reset-password",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\ResetPassword.vue",
-    "_name": "_2d6ec9ea"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\ResetPassword.vue"
   },
   {
     "name": "ResetPassword___de",
     "path": "/de/ResetPassword",
     "component": "D:\\\\GitHub\\\\vue.js\\\\trooper\\\\pages\\\\ResetPassword.vue",
-    "chunkName": "pages/ResetPassword",
-    "_name": "_8a3ebc06"
+    "chunkName": "pages/ResetPassword"
   },
   {
     "name": "my-account___de",
     "path": "/de/my-account/:pageName?",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\MyAccount.vue",
-    "_name": "_1096dc3c"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\MyAccount.vue"
   },
   {
     "name": "product___de",
     "path": "/de/p/:id/:slug",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Product.vue",
-    "_name": "_f8b599a0"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Product.vue"
   },
   {
     "name": "category___de",
     "path": "/de/c/:slug_1/:slug_2?/:slug_3?/:slug_4?/:slug_5?",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Category.vue",
-    "_name": "_5edf3ae6"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Category.vue"
   },
   {
     "name": "my-account___en",
     "path": "/my-account/:pageName?",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\MyAccount.vue",
-    "_name": "_1096dc3c"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\MyAccount.vue"
   },
   {
     "name": "product___en",
     "path": "/p/:id/:slug",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Product.vue",
-    "_name": "_f8b599a0"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Product.vue"
   },
   {
     "name": "category___en",
     "path": "/c/:slug_1/:slug_2?/:slug_3?/:slug_4?/:slug_5?",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Category.vue",
-    "_name": "_5edf3ae6"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Category.vue"
   },
   {
     "name": "home___en",
     "path": "/",
-    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Home.vue",
-    "_name": "_2f795524"
+    "component": "D:\\GitHub\\vue.js\\trooper\\pages\\Home.vue"
   }
 ]
