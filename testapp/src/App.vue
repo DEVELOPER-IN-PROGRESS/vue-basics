@@ -26,25 +26,44 @@
           <button type="submit" >Submit</button>
        </template>  
     </app-form> -->
-    <div class="provide-inject">
+
+    <!-- <div class="provide-inject">
         <list></list>
     </div>
-    <button @click="changeName">Change Name</button>
+    <button @click="changeName">Change Name</button> -->
+
+    <select v-model="optionName">
+        <option value="Home"> HOME </option>
+        <option value="About"> ABOUT </option>
+        <option value="Contact"> CONTACT US </option>
+    </select>
+
+    <keep-alive>
+       <component :is="optionName" ></component>
+    </keep-alive>
+
 </template>
 
 <script>
 // import AppForm from './components/Form.vue' 
- import List from './components/List.vue' 
+ //import List from './components/List.vue' 
+ import  Home from './components/Home.vue' 
+ import  About from './components/About.vue' 
+ import  Contact from './components/Contact.vue' 
 
 export default {
   name: 'App',
   components: {
-      List
+    
+      Home , 
+      About , 
+      Contact , 
   } ,
   data() {
     return {
        bucketList: ['Travel Abroad' , 'Write Everyday' , 'Cook a meal atleast everyday' , 'Clean room once a week'] ,
        user : 'Francesco' , 
+       optionName : 'Home' , 
     }
   },
 
@@ -72,4 +91,9 @@ export default {
 }
 </script>
 
- 
+ <style scoped>
+ select{
+   display: block ; 
+   margin-top: 40px ; 
+ }
+ </style>
