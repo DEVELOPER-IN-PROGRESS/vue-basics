@@ -2,7 +2,7 @@
   <div id="app">
       <h2>Hey  Y'all </h2>
       <message :age="age"></message>
-      <user @age-up="age++" :age="age"></user>
+      <user @age-up="updateAge" :age="age" :ageFn="updateAgeCB"></user>
   </div>
 </template>
 
@@ -21,6 +21,19 @@ export default {
       age : 15 , 
     }
   },
+
+  methods : {
+    updateAge(age){
+      this.age += age; 
+    },
+
+    updateAgeCB(num){
+       this.age += num ; 
+    } ,
+
+
+
+  } , 
  
 }
 </script>

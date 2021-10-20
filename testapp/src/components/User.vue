@@ -1,18 +1,27 @@
 <template>
     <button @click="ageUp">Update Age</button>
+    <button @click="ageFn(2)">Update Age Function </button>
+
     <p> You are {{ age }} Years old </p>
 </template>
 
 <script>
 export default {
   name: 'User',
-  props:['age'] , 
+  props:{
+    age :{
+      type: Number ,  
+    } , 
+
+    ageFn: Function 
+
+  }, 
 
   emits: ['age-up'] , 
  
   methods : {
     ageUp(){
-      this.$emit('age-up') ; 
+      this.$emit('age-up' , 1) ; 
     }
   } ,
 }
