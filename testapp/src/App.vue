@@ -1,36 +1,49 @@
 <template> 
-  <div id="app">
-      <h2>Hey  Y'all </h2>
-      <message :age="age"></message>
-      <user @age-up="updateAge" :age="age" :ageFn="updateAgeCB"></user>
-  </div>
+    <app-form>
+       <template v-slot:help>
+          <p>Need some Help here ? </p>
+       </template>
+       <template v-slot:fields>
+          <input type="email" placeholder="email" />
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+        </template>
+       <template v-slot:buttons>
+          <button type="submit" >Submit</button>
+       </template>  
+       <p>Slot Number 1</p>
+    </app-form>
+
+    <app-form>
+       <template v-slot:help>
+          <p>Contact Text Help  ? </p>
+       </template>
+       <template v-slot:fields>
+          <input type="email" placeholder="email" />
+          <input type="text" placeholder="username" />
+        </template>
+       <template v-slot:buttons>
+          <button type="submit" >Submit</button>
+       </template>  
+    </app-form>
 </template>
 
 <script>
-import User from './components/User.vue'
-import Message from './components/Message.vue'
+ import AppForm from './components/Form.vue' 
 
 export default {
   name: 'App',
   components: {
-    User ,
-    Message , 
+      AppForm ,
   } ,
   data() {
     return {
-      age : 15 , 
+      
     }
   },
 
   methods : {
-    updateAge(age){
-      this.age += age; 
-    },
-
-    updateAgeCB(num){
-       this.age += num ; 
-    } ,
-
+     
 
 
   } , 
@@ -38,13 +51,4 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+ 
