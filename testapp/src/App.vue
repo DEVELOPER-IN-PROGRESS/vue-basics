@@ -1,5 +1,5 @@
 <template> 
-    <app-form>
+    <!-- <app-form>
        <template v-slot:help>
           <p>Need some Help here ? </p>
        </template>
@@ -25,27 +25,48 @@
        <template v-slot:buttons>
           <button type="submit" >Submit</button>
        </template>  
-    </app-form>
+    </app-form> -->
+    <div class="provide-inject">
+        <list></list>
+    </div>
+    <button @click="changeName">Change Name</button>
 </template>
 
 <script>
- import AppForm from './components/Form.vue' 
+// import AppForm from './components/Form.vue' 
+ import List from './components/List.vue' 
 
 export default {
   name: 'App',
   components: {
-      AppForm ,
+      List
   } ,
   data() {
     return {
-      
+       bucketList: ['Travel Abroad' , 'Write Everyday' , 'Cook a meal atleast everyday' , 'Clean room once a week'] ,
+       user : 'Francesco' , 
     }
   },
 
+  provide() {
+      return {
+      user :  this.user , 
+      }
+  } , 
+
   methods : {
-     
+    changeName() {
+      console.log('click event');
+        this.user='Boba Fett'
+    },
 
 
+  } ,
+
+  computed : {
+      userName(){
+        return this
+      }
   } , 
  
 }
