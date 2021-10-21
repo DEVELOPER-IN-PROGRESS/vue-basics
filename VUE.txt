@@ -46,3 +46,20 @@ const app = Vue.createApp({}) ;  app.component('component-name', { methods });  
 Child to parent communication :: obviously props are passed from parent to child . But in the event of child event needing to communicate 
 to parent we need to use $emit(methodName)  inside child component . Communiation of sibiling nodes can occur only via parent(App in this case)
 so it is important to store the main state in Root component 
+
+another way to pass data from child to parent component is using callBack functions . We are not limited to sending data props to 
+child componets but also mathods as objects too . we then reference function as prop in child components as far as performance concerns  
+there is not a marginal difference between these two . but vue devs recommend the use of emitter events 
+
+Slots are means of reusing the markup  . We can pass markup between component and it can be rendered by using the slot tags inplace . 
+we can even show default slot content when there is no markup passed to the child component . v-slot are used in for slot component
+attributes . make sure to use template tags whereever v-slot:  attribute is used
+
+Provide/Inject :: inorder to access component instances we need to make provide as function returning objects i.e 
+provide() {  return { name : this.user.name , }  }
+Using the provide-inject pair the parent need not know which componet is using the injected property and the child component
+using the injected data need not know the origin 
+
+Dynamic Components ::  using the built-in <component>   use can dynamically render the component via select option in the 
+given example  but every time we switch component the previous component(S) are unmounted  . inOrder to persist the data we 
+can use the  <keep-alive> built in component to preserve the data 
