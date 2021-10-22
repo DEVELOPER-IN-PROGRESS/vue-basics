@@ -17,10 +17,21 @@
       <button @click="noActivated = !noActivated">Click me</button>
       <span v-if="noActivated">Oh no!</span>
     </div>
+    
+    <div
+    @mousemove="xCoordinate"
+    :style="{ backgroundColor: `hsl(${x}, 80%, 50%)` }"
+    class="movearea"
+  >
+    <h3>Move your mouse across the screen...</h3>
+    <p>x: {{x}}</p>
   </div>
 
   
+  </div>
+
   
+
 
     
 

@@ -63,3 +63,9 @@ using the injected data need not know the origin
 Dynamic Components ::  using the built-in <component>   use can dynamically render the component via select option in the 
 given example  but every time we switch component the previous component(S) are unmounted  . inOrder to persist the data we 
 can use the  <keep-alive> built in component to preserve the data 
+
+In mode="out-in" the elements that are leaving the DOM will be animated first . by default in <transition>
+the mode="in-out" . there are various animation hooks like before-enter , enter , after-enter , before-leave 
+leave, after-leave , enter-cancelled , leave-cancelled
+each of the hooks can take a native browser event and for the enter and leave hook there is a 2nd parameter which  is a callBack
+function that should be called when animation is done  enter(e,done){ done(); }

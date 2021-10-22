@@ -35,6 +35,10 @@ h2{
   }
   
 
+  .movearea {
+    transition: 0.2s background-color ease;
+  }
+  
   
   @keyframes shake {
     10%,
