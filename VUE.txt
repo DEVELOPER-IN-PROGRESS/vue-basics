@@ -69,3 +69,8 @@ the mode="in-out" . there are various animation hooks like before-enter , enter 
 leave, after-leave , enter-cancelled , leave-cancelled
 each of the hooks can take a native browser event and for the enter and leave hook there is a 2nd parameter which  is a callBack
 function that should be called when animation is done  enter(e,done){ done(); }
+
+check out the new WenAnimationsAPI  .animate()
+Vue prefers you to use CSS over JS animation so inside the function it checks whether there is a CSS animation class present or not 
+if done() ; is not present in the parameters vue will use the css animations to determine the duration . so we 
+can do some asynchronous tasks in the background and leverage the  hooks for writing better code 

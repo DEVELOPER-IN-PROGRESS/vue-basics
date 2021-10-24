@@ -59,6 +59,7 @@
           @before-leave="beforeLeave"
      @leave="leave"
      @after-leave="afterLeave"
+     :css="true"
      appear>
       <h2 v-if="flag" >hey Y'all </h2>
     </transition>
@@ -103,9 +104,15 @@ export default {
       console.log('before-enter hook activated' ,el );
    }, 
 
-   enter(el,done){
+   enter(el){
       console.log('enter hook activated ' ,el );
-      done();
+    
+   //  const animation =   el.animate([ { transform : "scale3d(0,0,0)"} , {}] , {
+   //       duration: 1000 ,
+   //    }) ; 
+   //    animation.onFinish = () =>{  
+   //    done();
+   //    }
    }, 
 
    afterEnter(el){
@@ -116,11 +123,17 @@ export default {
       console.log('before-leave hook activated' ,el );      
    }, 
 
-   leave(el, done){
+   leave(el){
       console.log('Leave hook activated' ,el );            
-      done();
+      
+      //   const animation =   el.animate([ {} ,{ transform : "scale3d(0,0,0)"} ] , {
+      //    duration: 1000 ,
+      // }) ; 
+      // animation.onFinish = () =>{  
+      // done(); 
+      // }
    }, 
-
+  
    afterLeave(el){
       console.log('after-leave hook activated' ,el );      
    }, 
