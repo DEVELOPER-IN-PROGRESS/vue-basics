@@ -73,4 +73,4 @@ function that should be called when animation is done  enter(e,done){ done(); }
 check out the new WenAnimationsAPI  .animate()
 Vue prefers you to use CSS over JS animation so inside the function it checks whether there is a CSS animation class present or not 
 if done() ; is not present in the parameters vue will use the css animations to determine the duration . so we 
-can do some asynchronous tasks in the background and leverage the  hooks for writing better code 
+can do some asynchronous tasks in the background and leverage the  hooks for writing better code    
